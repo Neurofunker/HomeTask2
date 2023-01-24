@@ -12,12 +12,7 @@
 	{
 	    int firstNumber = number / 10;
 	    int secondNumber = firstNumber % 10;
-	    if (secondNumber < 0)
-	    {
-	        secondNumber = (secondNumber) * -1;
-	    }
-	
-
+	   
 	    int result = secondNumber;
 	    return result;
 	}
@@ -25,6 +20,10 @@
 
 	Console.Write("Введите трехзначное число: ");
 	int number = Convert.ToInt32(Console.ReadLine());
+	 if (number < 0)
+	    {
+	        number = (number) * -1;
+	    }
 	if (number < 1000)
 	{
 	    int finishNumber = GetNumber(number);
